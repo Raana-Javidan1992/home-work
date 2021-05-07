@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+        }
+        .container{
+            text-align: center;
+        }
+        button {
+            width: 2em;
+            height: 1.7em;
+        }
+
+        input {
+            text-align: center;
+
+            width: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h3>Time</h3>
+        <div class="incremental-input timer" id="time-input">
+            <button id="minus_timer">-</button>
+            <input type="text" class="form-control" id="timer_counter">
+            <button id="plus_timer">+</button>
+        </div>
+    
+    
+        <h3>Counter</h3>
+        <div class="incremental-input counter" id="counter-input">
+            <button id="minus">-</button>
+            <input type="text" class="form-control" value="5" id="counter_number">
+            <button id="plus">+</button>
+        </div>
+        <div id="timeClock"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="includes/jquery-1.6.2.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    
+
+        let counter = 5;
+        $("#plus").click(function () {
+            counter++;
+            $("#counter_number").val(counter);
+        });
+
+        $("#minus").click(() => {
+            counter--;
+            $("#counter_number").val(counter);
+
+        })
+
+        // ____________
+        let h = 3;
+        let m = 15;
+        $("#timer_counter").val(h + ":" + m);
+
+        $("#minus_timer").click(() => {
+            if (h == 0 && m === 0) {
+                //why it doesn't work?
+                alert("finished");
+                $('#minue_timer').on('click', function (e) {
+                    e.preventDefault();
+                    $(this).prop('disabled', true);
+                })
+            }
+            m--;
+            if (-1 > m) {
+                h--;
+                m = 0;
+
+                $("#timer_counter").val(h + ":" + m);
+                m = 60;
+            }
+            else
+                $("#timer_counter").val(h + ":" + m);
+        }
+        )
+
+        // ________________
+        $("#plus_timer").click(() => {
+            m++
+            if (60 < m) {
+                h++;
+                m = 0;
+
+                $("#timer_counter").val(h + ":" + m);
+            }
+            else
+                $("#timer_counter").val(h + ":" + m);
+        }
+        )
+
+
+
+    </script>
+</body>
+
+</html>

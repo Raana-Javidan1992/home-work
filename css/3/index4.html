@@ -1,0 +1,1364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.0/js/bootstrap-select.min.js" integrity="sha512-4Z3wjB72KKDCH9Mrlkv36NmN1YsJiIH29OZ2Xy60/VRPZowGs0Mm3hBkrsuaaXPdvEywp4mVE/eOlMvvKLGZgA==" crossorigin="anonymous"></script>
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+    </script> -->
+</head>
+<body>
+    <div class="container">
+        <h1>Select Number Of Rows</h1>
+        <form action="/action_page.php" id="myForm">
+          <div class="form-group">
+            <select class="form-control" id="selected-rows" name="sellist1">
+              <option value="5" id="five">5</option>
+              <option value="10" id="ten">10</option>
+              <option value="50" id="fifty">50</option>
+              <option value="100" id="hundred">100</option>
+            </select>
+            <br>
+            
+          </form>
+      </div>
+    <div class="table-responsive" id="page-nav" >
+        <table class="table table-striped w-auto table-hover" id="data">
+            <tbody>
+                <tr class="table-info paginate">
+                  <th scope="row">1</th>
+                  <td>Kate</td>
+                  <td>Moss</td>
+                  <td>USA</td>
+                  <td>New York City</td>
+                  <td>Web Designer</td>
+                  <td>23</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">2</th>
+                  <td>Anna</td>
+                  <td>Wintour</td>
+                  <td>United Kingdom</td>
+                  <td>London</td>
+                  <td>Frontend Developer</td>
+                  <td>36</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">3</th>
+                  <td>Tom</td>
+                  <td>Bond</td>
+                  <td>Spain</td>
+                  <td>Madrid</td>
+                  <td>Photographer</td>
+                  <td>25</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">4</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">5</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">6</th>
+                  <td>Anna</td>
+                  <td>Wintour</td>
+                  <td>United Kingdom</td>
+                  <td>London</td>
+                  <td>Frontend Developer</td>
+                  <td>36</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">7</th>
+                  <td>Tom</td>
+                  <td>Bond</td>
+                  <td>Spain</td>
+                  <td>Madrid</td>
+                  <td>Photographer</td>
+                  <td>25</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">8</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">9</th>
+                  <td>Kate</td>
+                  <td>Moss</td>
+                  <td>USA</td>
+                  <td>New York City</td>
+                  <td>Web Designer</td>
+                  <td>23</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">10</th>
+                  <td>Anna</td>
+                  <td>Wintour</td>
+                  <td>United Kingdom</td>
+                  <td>London</td>
+                  <td>Frontend Developer</td>
+                  <td>36</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">11</th>
+                  <td>Tom</td>
+                  <td>Bond</td>
+                  <td>Spain</td>
+                  <td>Madrid</td>
+                  <td>Photographer</td>
+                  <td>25</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">12</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">13</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+             
+                <tr class="paginate">
+                  <th scope="row">14</th>
+                  <td>Anna</td>
+                  <td>Wintour</td>
+                  <td>United Kingdom</td>
+                  <td>London</td>
+                  <td>Frontend Developer</td>
+                  <td>36</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">15</th>
+                  <td>Tom</td>
+                  <td>Bond</td>
+                  <td>Spain</td>
+                  <td>Madrid</td>
+                  <td>Photographer</td>
+                  <td>25</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">16</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">17</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">18</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">19</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">20</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">21</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">22</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">23</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">24</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">25</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">26</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">27</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">28</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">29</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">30</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">31</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">32</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">33</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">34</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">35</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">36</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">37</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">38</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">39</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">40</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">41</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">42</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">43</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">44</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">45</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">46</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">47</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">48</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">49</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">50</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">51</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">52</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">53</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">54</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">55</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">56</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">57</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">58</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">59</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">60</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">61</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">62</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">63</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">64</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">65</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">66</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">67</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">68</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">69</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">70</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">71</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">72</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">73</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">74</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">75</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">76</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">77</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">78</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">79</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">80</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">81</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">82</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">83</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">84</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">85</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">86</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">87</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">88</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">89</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">90</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">91</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">92</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">93</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">94</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">95</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">96</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">97</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">98</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">99</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">100</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">101</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">102</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">103</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">104</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">105</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">106</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">107</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">108</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">109</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">110</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">111</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">112</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">113</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">114</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">115</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">116</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">117</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">118</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">119</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">120</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">121</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">122</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">123</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">124</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">125</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">126</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">127</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">128</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">129</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                <tr class="paginate">
+                  <th scope="row">130</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">131</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">132</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">133</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">134</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">135</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">136</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">137</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">138</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">139</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">140</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">141</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">142</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">143</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">144</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">145</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">146</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">147</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">148</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                <tr class="table-info paginate">
+                  <th scope="row">149</th>
+                  <td>Janis</td>
+                  <td>Joplin</td>
+                  <td>Poland</td>
+                  <td>Warsaw</td>
+                  <td>Video Maker</td>
+                  <td>39</td>
+                </tr>
+                <tr class="paginate">
+                  <th scope="row">150</th>
+                  <td>Jerry</td>
+                  <td>Horwitz</td>
+                  <td>Italy</td>
+                  <td>Bari</td>
+                  <td>Editor-in-chief</td>
+                  <td>41</td>
+                </tr>
+                
+
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" id="prev-page" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <!-- <li class="page-item"><a class="page-link active" href="#">1</a></li> -->
+          <!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li> -->
+          <!-- <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li> -->
+        </ul>
+    </nav>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous">
+    </script>
+    <script src="index4.js"></script>
+</body>
+</html>
