@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="top">
+        <p class="pink" id="total_sum_p">مبلغ کل:  0 ریال</p>
+        <div class="green" id="total_tax_p">مالیات کل: 0 ریال</div>
+    </div>
+    <div style="overflow-x:auto;" >
+        <button class="btn" onclick="myFunc()" id="my_button">+</button>
+        <table class="table" id="myTable">
+            <thead class="thead">
+                <tr id="input_row">
+                  <th>ردیف</th>
+                  <th>کالا یا خدمات</th>
+                  <th>شرح</th>
+                  <th>واحد</th>
+                  <th>تعداد</th>
+                  <th>مبلغ واحد (ریال)</th>
+                  <th>تخفیف (درصد)</th>
+                  <th>مالیات (ریال)</th>
+                  <th>مبلغ کل (ریال)</th>           
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr id="#default-row'">
+                    <td><input type="text" class="inp" id="key" disabled>#</td>
+                    <td>
+                      <select value="select..."  class="dropdown-btn" id="services">
+                            <i class="fa fa-caret-down"></i>
+                          <option value="کالا" id="kala">کالا</option>
+                          <option value="خدمات" id="khadamat">خدمات</option>
+                      </select>
+                    </td>
+                    <td><input type="text" name="item"  class="inp" id="description"></td>
+                    <td><input type="text" name="item"  class="inp" id="unit"></td>
+                    <td><input type="text" name="item"  class="inp" id="quantity"></td>
+                    <td><input type="text" name="item"  class="inp" id="unit_price"></td>
+                    <td><input type="text" name="item"  class="inp" id="off"></td>
+                    <td><input type="text" name="item"  class="inp" id="tax"></td>
+                    <td><input class="inp" id="total">
+                        <td id="operations" id="svgs">
+                            <svg id="save" onclick="saveFunc()" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M13 3h2.996v5h-2.996v-5zm11 1v20h-24v-24h20l4 4zm-17 5h10v-7h-10v7zm15-4.171l-2.828-2.829h-.172v9h-14v-9h-3v20h20v-17.171z"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M17.026 22.957c10.957-11.421-2.326-20.865-10.384-13.309l2.464 2.352h-9.106v-8.947l2.232 2.229c14.794-13.203 31.51 7.051 14.794 17.675z"/></svg>                       
+                        </td>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script type="text/javascript" src="./jquery-3.6.0.js"></script>
+    <script src="ezafi.js"></script>
+</body>
+</html>

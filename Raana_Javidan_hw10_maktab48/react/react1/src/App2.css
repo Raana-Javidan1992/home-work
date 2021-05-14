@@ -1,0 +1,38 @@
+/*first card style*/
+.container{
+    width: 80%;
+    height: 300px;
+    display: flex;
+    /* background-color: #0000ff; */
+    margin: auto;
+    margin-top: 5%;
+}
+.sec-container{
+    width: 33.3%;
+    height: 200px;
+}
+.third-container{
+    background-color: #ffca1d;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+h4{
+    color: #595959;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; 
+}
