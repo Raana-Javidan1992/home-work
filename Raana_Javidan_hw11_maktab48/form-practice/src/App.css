@@ -1,0 +1,98 @@
+html {
+	overflow-y: scroll; 
+}
+.App {
+  text-align: center;
+  direction: rtl;
+  background-color: #c1bdba; 
+  width: 400px;
+  height: 500px;
+  justify-content: center;
+  margin: auto;
+}
+.form-style{
+  background-color: #13232f;
+  margin: 27px;
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+  position: absolute;
+  box-shadow:0 4px 10px 4px rgba(#13232f,.3)
+}
+.container{
+  padding: 10px;
+}
+
+h3{
+  color: white;
+}
+input{
+  border:1px solid #a0b3b0;
+  color:  white;
+  background-color: #13232f;
+}
+input::placeholder{
+  color:  rgb(209, 207, 207);
+}
+.inp-width{
+  width: 90%;
+  margin: 5px;
+  outline: none;
+}
+select{
+  width: 93%;
+  margin: 5px;
+  outline: none;
+  background-color: #13232f;
+  border: 1px solid #a0b3b0;
+  color: white;
+}
+.inp-width2{
+  width: 42%;
+  margin: 5px;
+  outline: none;
+
+}
+.btn-style{
+  width: 90%;
+  margin: auto;
+}
+
+.btn1{
+  width: 50%;
+}
+.btn2{
+  width: 50%;
+}
+.btn{
+  background-color: rgba(255, 255, 255, .1);
+  outline: none;
+  color: white;
+  height: 30px;
+  margin-top: 20px;
+}
+.btn-active{
+  background-color: #1ab188;
+  outline: none;
+  color: white;
+  height: 30px;
+  margin-top: 20px;
+}
+.btn3{
+  background-color: #1ab188;
+  color: white;
+  outline: none;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 90%;
+}
+.forget{
+  float: right;
+  text-decoration: none;
+  color: #1ab188;
+  padding: 20px;
+}
+input[type="password"]{
+  color: white;
+}
